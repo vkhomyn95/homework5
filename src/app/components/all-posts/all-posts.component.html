@@ -1,0 +1,7 @@
+<form #postForm="ngForm" (ngSubmit)="getCurrentPost()">
+  <select name="id" [(ngModel)]="id">
+    <option *ngFor="let post of posts" [value]="post.id">{{ post.title }}</option>
+  </select>
+  <button>get</button>
+</form>
+<router-outlet></router-outlet>

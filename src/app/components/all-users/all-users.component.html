@@ -1,0 +1,7 @@
+<form #userForm="ngForm" (ngSubmit)="getCurrentUser()">
+  <select name="id" [(ngModel)]="id">
+    <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+  </select>
+  <button>get</button>
+</form>
+<router-outlet></router-outlet>
